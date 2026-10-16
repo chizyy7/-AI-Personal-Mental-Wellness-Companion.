@@ -1,0 +1,2 @@
+id,timestamp,date,title,content,sentiment,emotion,intensity,patterns,emotion_scores
+1792132679880,2026-10-16T12:07:59,2026-10-16,my mood,just get bored easily,Neutral,Calmness,Low,[],"{""calmness"": 1.0}"

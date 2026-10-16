@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Environment / secrets
+.env
+
+# MindfulMe local RAG index (rebuilt automatically; can get large)
+data/chroma/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

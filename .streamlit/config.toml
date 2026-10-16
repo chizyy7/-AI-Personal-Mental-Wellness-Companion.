@@ -1,0 +1,17 @@
+# Streamlit configuration for MindfulMe
+# Keeps the default widget theme aligned with the app's calm palette and hides
+# developer toolbars for a tidier, more peaceful experience.
+
+[theme]
+base = "light"
+primaryColor = "#4a9e7f"
+backgroundColor = "#f4f8f5"
+secondaryBackgroundColor = "#ffffff"
+textColor = "#22303a"
+font = "sans serif"
+
+[client]
+toolbarMode = "minimal"
+
+[browser]
+gatherUsageStats = false

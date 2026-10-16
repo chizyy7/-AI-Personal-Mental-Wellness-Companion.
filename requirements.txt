@@ -1,0 +1,35 @@
+# ===========================================================================
+# MindfulMe - requirements
+# ---------------------------------------------------------------------------
+# Install everything with:   pip install -r requirements.txt
+#
+# The app is designed to degrade gracefully: if an optional heavy dependency is
+# missing, MindfulMe still runs using a lighter built-in fallback (noted below).
+# ===========================================================================
+
+# --- Core app (always required) --------------------------------------------
+streamlit>=1.32          # the entire UI
+pandas>=2.0              # data handling & CSV persistence
+numpy>=1.24              # numerics
+plotly>=5.18             # interactive charts
+requests>=2.31           # talking to Ollama / OpenAI-compatible APIs
+
+# --- Required for full functionality ---------------------------------------
+scikit-learn>=1.3        # pattern clustering + TF-IDF retrieval fallback
+
+# --- Recommended (rich features; each has a fallback if absent) -------------
+# Emotion analysis: deep transformer model (falls back to the built-in
+# lexicon engine automatically).
+transformers>=4.38
+torch>=2.1
+
+# Forecasting with Prophet (falls back to a simple linear-trend estimate).
+prophet>=1.1.5
+
+# RAG retrieval over your own entries (falls back to Ollama embeddings or
+# scikit-learn TF-IDF, and to an in-memory vector index).
+sentence-transformers>=2.5
+chromadb>=0.4.22
+
+# --- Optional --------------------------------------------------------------
+python-dotenv>=1.0       # load API keys from a local .env file
